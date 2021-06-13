@@ -1,0 +1,309 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/C sevice & Installation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="acService.css">
+  
+
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .brandspan{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.brandspan2{
+    color: goldenrod;
+    font-size: 35px;
+    font-weight: bold;
+}
+.brandspan3{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+}
+.navlink1{
+    color: white;
+    font-weight: bold;
+    margin-left: 900px;
+}
+.navlink2{
+    font-weight: bold;
+    margin-left: 30px;
+}
+.custom-span{
+  color: red;
+  font-weight: bold;
+ 
+ 
+}
+@media only screen and (max-width: 600px){
+    .navlink1 {
+        color: white;
+        font-weight: bold;
+        margin-left: 46px;
+    }
+    .navlink2 {
+    font-weight: bold;
+    margin-left: 51px;
+}
+  }
+  </style>
+   
+</head>
+
+<body onload="load_function()">
+  <div id="loading"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+    <a class="navbar-brand" href="#"> <span class="brandspan"> FIX</span><span class="brandspan2">itt </span> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div  id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+
+
+        <li class="nav-item ">
+
+        <li class="nav-item ">
+          <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal" data-target="#cart"><i
+              class="fa fa-suitcase"></i> My Booking <span class="custom-span">(</span><span class="total-count custom-span"></span><span class="custom-span">)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
+        </li>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="container-auto">
+    <h1 class="head">A/C Service & Installation</h1>
+    <video class="videoad" controls autoplay loop >
+      <source src="./Videos/acbideo.mp4" type="video/mp4">
+
+
+    </video>
+ 
+    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example ">
+      <div class="scrollbar ">
+        <div class="col-md-12" id="list-item-1">
+          <div class="row" >
+            <div class="col-md-4">
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Split AC Service</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹699</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="Split_AC_Service" data-price="699"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img class="repairman-img" src="./images/repairman.jpg" alt="">
+            </div>
+            <div class="col-md-4">
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Window AC Service</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹499</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="Window_AC_Service" data-price="499"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-md-12" >
+          <div class="row" id="list-item-2" >
+            <div class="col-md-4"  >
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Split AC Check-up</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹299</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="Split_AC_Check_up" data-price="299"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img class="repairman-img" src="./images/repairman2.jpg" alt="">
+            </div>
+            <div class="col-md-4">
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Window AC Check-up</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹299</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="Window_AC_Check_up" data-price="299"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-md-12" >
+          <div class="row" id="list-item-3" >
+            <div class="col-md-4"  >
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Split AC Installation</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹799</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="Split_AC_Installation" data-price="799"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4"  >
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Window AC Installation</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹699</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="Window_AC_Installation" data-price="699"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card custom-card" style="width: 20rem;">
+
+                <div class="card-block">
+                  <h4 class="card-title card-head">Both AC Uninstallation</h4>
+                  <span style="color: grey; font-weight: bold;"><i class="fa fa-star" style="color: green;">4.8</i> 2.9k
+                    rating</span>
+                  <p class="card-text card-para">Price: ₹599</p>
+                  <ul class="card-ul">
+                    <li>Technician should aware of all COVID protocol</li>
+                    <li>Only fixed charge should be charged</li>
+                  </ul>
+                  <p><i class="fa fa-clock-o"></i> 45 min</p>
+                  <a href="#" data-name="AC uninstallation" data-price="599"
+                    class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    
+    <img  style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
+    
+    <img style="width: 100%;"  src="./images/footer2.png" alt="">
+
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table">
+
+            </table>
+            <div style="font-weight: bold;">Total price: ₹<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button class="clear-cart btn btn-danger">Clear Cart</button>
+            <button type="button" class="btn btn-primary">Book now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="cart.js"></script>
+    <script>
+      var preloader = document.getElementById("loading");
+      function load_function(){
+         preloader.style.display = "none";
+        
+      }
+    </script>
+</body>
+
+</html>

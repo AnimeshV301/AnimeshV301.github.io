@@ -1,0 +1,419 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpenter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .bg-img {
+            margin-top: 80px;
+
+        }
+
+        .bg-wall {
+            width: 100%;
+            height: 450px;
+            filter: brightness(0.5);
+        }
+
+        .head {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .sec1 {
+            position: absolute;
+            top: 125px;
+        }
+
+        .sec1-ul {
+
+            color: white;
+            margin-left: 35px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .card {
+            width: 200px;
+            height: 180px;
+            margin: 0px 10px;
+            background-color: whitesmoke;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+            transition: all 150ms ease-in-out;
+        }
+
+        .card:hover {
+            top: -3px;
+            left: -3px;
+            box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+        }
+
+        .card:active {
+            top: 2px;
+            left: 2px;
+            background-color: #e50000;
+            box-shadow: inset 0 0 10px rgba(82, 82, 82, 0.85);
+        }
+
+
+        .sec2 {
+            margin-top: 50px;
+        }
+
+        .para1 {
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+
+        }
+
+        .card-para {
+            font-weight: bold;
+        }
+
+        #loading {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(192, 192, 192, 0.5);
+            background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .card-img{
+            width: 90px;
+            margin-left: 50px;
+        }
+        .card-info{
+            text-align: center;
+            font-weight: bold;
+        }
+        .card-btn{
+            margin-top: -15px;
+            margin-left: 70px;
+        }
+        .brandspan{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.brandspan2{
+    color: goldenrod;
+    font-size: 35px;
+    font-weight: bold;
+}
+.brandspan3{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+}
+.navlink1{
+    color: white;
+    font-weight: bold;
+    margin-left: 900px;
+}
+.navlink2{
+    font-weight: bold;
+    margin-left: 30px;
+}
+.custom-span{
+  color: red;
+  font-weight: bold;
+ 
+ 
+}
+.modal-bg{
+     
+     background-image: linear-gradient( 110.5deg,  rgba(248,196,249,0.66) 22.8%, rgba(253,122,4,0.15) 64.6% );
+    }
+
+        @media only screen and (max-width: 600px) {
+            .bg-wall {
+                width: 100%;
+                height: 565px;
+                filter: brightness(0.5);
+            }
+
+            .paint-para {
+                margin-left: 50px;
+            }
+
+            .sec1 {
+                position: absolute;
+                top: 172px;
+            }
+
+            .sec1-ul {
+
+                margin-left: -9px;
+            }
+
+            .bg-img {
+                margin-top: 179px;
+            }
+            .card{
+                margin-left: 67px;
+    margin-top: 17px;
+            }
+            .navlink1 {
+        color: white;
+        font-weight: bold;
+        margin-left: 46px;
+    }
+    .navlink2 {
+    font-weight: bold;
+    margin-left: 51px;
+}
+
+
+        }
+    </style>
+</head>
+
+
+<body onload="myloader()">
+    <div id="loading"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <a class="navbar-brand" href="#"> <span class="brandspan"> FIX</span><span class="brandspan2">itt </span> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div  id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+    
+    
+    
+            <li class="nav-item ">
+    
+            <li class="nav-item ">
+              <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal" data-target="#cart"><i
+                  class="fa fa-suitcase"></i> My Booking <span class="custom-span">(</span><span class="total-count custom-span"></span><span class="custom-span">)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
+            </li>
+            </li>
+    
+    
+          </ul>
+    
+        </div>
+      </nav>
+    <div class="container-auto">
+        <div class="bg-img">
+            <img class="bg-wall" src="./images/carpenter.jpg" alt="">
+         
+        </div>
+        <div class="col-md-12 sec1">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="head">Best Carpenters from Fixitt</h1>
+                    <h5 style="text-align: center; color: white;font-weight: bold;">Inclusion & Exclusion</h5>
+                    <ul class="sec1-ul">
+                        <li>Door Stopper Fitting or Installation - Fixing a door stopper to a wooden or flush door.</li>
+                        <li>Rate - Includes labour charges only. Any parts that require replacement will be extra, based on actuals..</li>
+                        <li>Mesh Fitting or Installation - Fixing mesh to window shutters either fixed to the window shutter or using Velcro. Note - The scope of the work will be decided on inspection.</li>
+                        <li>Rate - Includes labour charges only. Any parts that require replacement will be extra, based on actuals.
+                        </li>
+                        <li>Material/Spare parts costs..</li>
+                        <li>Mesh Replacement - Removal of the old mesh and replacing the same with the new one.</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-12 sec2  ">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>General Carpentery Workk</h4>
+                    <ul>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                    </ul>
+                    <div class="card">
+                        <img src="./images/carp1.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Wooden Partion <br> On Inspection</p>
+                        <a href="#" data-name="Partition_Inspection" data-price="299"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp2.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Mesh <br> On Inspection</p>
+                        <a href="#" data-name="Mesh_Inspection" data-price="299"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp3.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Chair<br> ₹275</p>
+                        <a href="#" data-name="Wooden_Chair" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp4.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Bed <br> On Inspection</p>
+                        <a href="#" data-name="Bed_Inspection" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp5.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Other Work <br> On Inspection</p>
+                        <a href="#" data-name="wooden_Other_Service" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                </div>
+                <div class="col-md-12 sec2">
+                    <h4>Bolt,Latch and Handle work</h4>
+                    <ul>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                    </ul>
+                    <div class="card">
+                        <img src="./images/carp6.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Door Stopper <br>  ₹275</p>
+                        <a href="#" data-name="Door-Stopper" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp7.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Handle <br>  ₹275</p>
+                        <a href="#" data-name="Door_Handle "data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp8.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Door Chain<br> ₹275</p>
+                        <a href="#" data-name="Door_Chain" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp9.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Door Latch<br>  ₹275</p>
+                        <a href="#" data-name="Door_latch" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/carp10.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Door Hinges  <br>  ₹275</p>
+                        <a href="#" data-name="Door_Hinges" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                    <div style="margin-top: 50px;" class="card">
+                        <img src="./images/carp11.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Door peephole  <br>  ₹275</p>
+                        <a href="#" data-name="Door_Peephole" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                 
+                </div>
+                <div class="col-md-12 sec2">
+                    <h4>Furniture installation and Assembly</h4>
+                    <ul>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                    </ul>
+                    <div class="card">
+                        <img src="./images/carp12.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Lock <br> ₹399</p>
+                        <a href="#" data-name="Lock" data-price="399"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                   
+                    <div class="card">
+                        <img src="./images/carp1.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Other Work <br> On Inspection</p>
+                        <a href="#" data-name="Carpenter_Inspection" data-price="375"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                 
+                 
+                </div>
+                <div class="col-md-12 sec2">
+                    <h4>Carpenter Services</h4>
+                    <ul>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                    </ul>
+                    <div class="card">
+                        <img src="./images/carp5.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Carpenter repair <br> On Inspection</p>
+                        <a href="#" data-name="Carpenter_Repair_inspection" data-price="275"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                   
+                    <div class="card">
+                        <img src="./images/carp2.jpg" class="rounded-circle card-img" alt="Cinque Terre">
+                        <p class="card-info">Full Home <br> Health Chechup</p>
+                        <a href="#" data-name="Full_Carpenter_Service" data-price="499"
+                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                    </div>
+                  
+                 
+                 
+                </div>
+            </div>
+        </div>
+        <img  style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
+        <img style="width: 100%;"  src="./images/footer2.png" alt="">
+        
+        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content modal-bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="show-cart table">
+
+                        </table>
+                        <div style="font-weight: bold;">Total price: ₹<span class="total-cart"></span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="clear-cart btn btn-danger">Clear Cart</button>
+                        <button type="button" class="btn btn-primary">Book now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   
+    <script src="cart.js"></script>
+    <script>
+        var preloader = document.getElementById("loading");
+        function myloader() {
+            preloader.style.display = "none";
+
+        }
+    </script>
+ 
+</body>
+
+</html>

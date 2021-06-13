@@ -1,0 +1,629 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixit.com</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <style>
+    .html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .carousel-cell {
+      width: 20%;
+      height: 200px;
+      margin-right: 10px;
+
+
+      counter-increment: gallery-cell;
+    }
+
+    .imgslider {
+      width: 100%;
+      height: 250px;
+    }
+
+    .custom-slider {
+      margin-top: 100px;
+    }
+
+    .flickity-page-dots {
+      display: none;
+    }
+
+    #loading {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(192, 192, 192, 0.5);
+      background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+  <script src="include.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <a class="navbar-brand" href="#"> <span class="brandspan"> FIX</span><span class="brandspan2">itt </span> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item ">
+          <a style="color: white;" class="nav-link navlink1 " href="#why">Why FIXit ?</a>
+        </li>
+        <li class="nav-item ">
+          <a style="color: white;" class="nav-link navlink2 " href="becomepartner.html"><i class="fa fa-male"></i>&nbsp; Become a
+            Partner</a>
+        </li>
+        <li class="nav-item ">
+          <a style="color: white;" class="nav-link navlink2 " href="contactus.html">Contact Us</a>
+        </li>
+        <li class="nav-item ">
+          <a style="color: white;" class="nav-link navlink2" href="#" data-toggle="modal" data-target="#exampleModal"
+            data-whatever="@mdo"><i class="fa fa-user"></i> Login/Sign up</a>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="container-auto">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 custom-img" src="./images/slider3.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 custom-img" src="./images/slider1.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 custom-img" src="./images/slider2.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 slider-sec">
+      <p class="sliderpara">Quick Home Service,on demand</p>
+      <p class="sliderpara2">Experienced Hand-Picked professional to <br> serve you at your Doorstep </p>
+      <p class="sliderpara3">Where do you need a service?</p>
+      <div class="dropdown">
+        <div class="dropdown-title">Select Your City</div>
+        <div class="dropdown-content">
+          <div class="item">Lucknow</div>
+          <div class="item">Nagpur</div>
+          <div class="item">Lucknow</div>
+          <div class="item">Nagpur</div>
+          <div class="item">Lucknow</div>
+          <div class="item">Nagpur</div>
+          <div class="item">Lucknow</div>
+          <div class="item">Nagpur</div>
+          <div class="item">Lucknow</div>
+          <div class="item">Nagpur</div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section2">
+    <h2 style="text-align: center;margin-top: 50px;"><ins>Construction and Maintanance Services</ins> </h2>
+    <img  class="bannerimg" src="./images/banner1.jpg" alt="">
+    <div class="col-md-12 card-row">
+    
+      <div class="row">
+        <div class="col-md-3 repair-card">
+
+          <img src="./images/card4.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+          <p class="cardpara">Electrician</p>
+
+
+          <button onclick="document.location=`electric.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+              Now</span> </button>
+        </div>
+        <div class="col-md-3 repair-card">
+
+          <img src="./images/card2.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+          <p class="cardpara">Appliances Repair</p>
+
+
+          <button class="btn  custom-btn btn-5 btn-pos" data-toggle="modal" data-target="#exampleModalLong"> <span>Book
+              Now</span> </button>
+        </div>
+        <div class="col-md-3 repair-card">
+
+          <img src="./images/card3.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+          <p class="cardpara">Painters</p>
+
+
+          <button onclick="document.location=`painter.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+              Now</span> </button>
+
+        </div>
+        < <div class="col-md-3 repair-card">
+
+          <img src="./images/card1.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+          <p class="cardpara">A/C Service & Installation</p>
+
+
+          <button onclick="document.location=`acService.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+              Now</span> </button>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-12 card-row card-row2">
+    <div class="row">
+      <div class="col-md-3 repair-card">
+
+        <img src="./images/card5.png" class="rounded-circle cardimg1" alt="Cinque Terre">
+        <p class="cardpara">Plumber</p>
+
+
+        <button onclick="document.location=`plumber.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+            Now</span> </button>
+      </div>
+      <div class="col-md-3 repair-card">
+
+        <img src="./images/car6.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+        <p class="cardpara">Carpenter</p>
+
+
+        <button onclick="document.location=`carpenter.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+            Now</span> </button>
+      </div>
+      <div class="col-md-3 repair-card">
+
+        <img src="./images/card7.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+        <p class="cardpara">Cleaning</p>
+
+
+        <button onclick="document.location=`cleaning.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+            Now</span> </button>
+      </div>
+      <div class="col-md-3 repair-card">
+
+        <img src="./images/card8.jpg" class="rounded-circle cardimg1" alt="Cinque Terre">
+        <p class="cardpara">Pest Control</p>
+
+
+        <button onclick="document.location=`pestcontrol.html`" class="btn  custom-btn btn-5 btn-pos"> <span>Book
+            Now</span> </button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <div class="carousel custom-slider" data-flickity='{ "autoPlay": true }'>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/rorepair.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/tvrepair.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/chimneyrepair.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/wmrepair.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/repairman2.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/fridgerepair.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/geysarrepair.jpg" alt="">
+    </div>
+    <div class="carousel-cell">
+      <img class="imgslider" src="./images/repairman.jpg" alt="">
+    </div>
+  </div>
+ 
+  <div class="col-md-12 ">
+    <div class="row" id="why">
+      <div class="col-md-6">
+        <p class="section3para">Why Fixit ?</p>
+        <div class="section3icon"><i class="fa fa-bank"></i></div>
+        <div class="sec3para">Transparent pricing</div>
+        <div class="sec3para2">See fix price brfore you book.No hidden charges</div>
+        <div class="section3icon"><i class="fa fa-male"></i></div>
+        <div class="sec3para">Experts Only</div>
+        <div class="sec3para2">Our professional are well trained and job expertise</div>
+        <div class="section3icon"><i class="fa fa-suitcase"></i></div>
+        <div class="sec3para">Fully Equipped</div>
+        <div class="sec3para2">We get evrything needed to get job doe well</div>
+      </div>
+      <div class="col-md-6">
+        <img  class="assured-img" src="./images/assuredimg.png" alt="">
+      </div>
+    </div>
+  </div>
+  <img style="margin-top: 50px; " class="bannerimg" src="./images/banner2.jpg" alt="">
+  <div class="col-md-12 mobilesec">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mobilepara">Get Website Link on your Mobile</p>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text flagspan" id=""><i class="fa fa-flag"></i> &nbsp; INDIA +91</span>
+          </div>
+          <input type="number" max="10" class="form-control mobileinpu">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Send</button>
+          </div>
+
+        </div>
+        <a class="navbar-brand logo" href="#"> <span class="brandspan" style="color: burlywood;"> FIX</span><span
+            class="brandspan2">iT </span> <span class="brandspan3" style="color: burlywood;">.com</span></a>
+        <p class="intropara">Fixit is a service provider company that is serving in appliances repairing and maintenance
+          field in India. We are here for you with highly professional and expert technicians</p>
+      </div>
+      <div class="col-md-3">
+        <img class="mobileimg" src="./images/mobile2.png" alt="">
+      </div>
+      <div class="col-md-3">
+        <img class="mobileimg img2" src="./images/mobile1.png" alt="">
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+  
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fa fa-facebook-f"></i></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fa fa-twitter"></i></a>
+  
+        <!-- Google -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fa fa-google"></i></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fa fa-linkedin"></i></a>
+        <!-- Github -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fa fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+  
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example2" class="form-control" />
+                <label class="form-label" for="form5Example2">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+  
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+  
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Fixit is a service provider company that is serving in appliances repairing and maintenance
+          field in India. We are here for you with highly professional and expert technicians
+        </p>
+      </section>
+      <!-- Section: Text -->
+  
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="painter.html" class="text-white">Painter</a>
+              </li>
+              <li>
+                <a href="carpenter.html" class="text-white">Carpenter</a>
+              </li>
+              <li>
+                <a href="ro.html" class="text-white">Water Purifier</a>
+              </li>
+              <li>
+                <a href="tv.html" class="text-white">Led Tv Services</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="cleaning.html" class="text-white">Cleaning</a>
+              </li>
+              <li>
+                <a href="geysar.html" class="text-white">Geysar</a>
+              </li>
+              <li>
+                <a href="fridge.html" class="text-white">Refridgerator</a>
+              </li>
+              <li>
+                <a href="oven.html" class="text-white">Microwave</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="plumber.html" class="text-white">Plumber</a>
+              </li>
+              <li>
+                <a href="chimney.html" class="text-white">Chimney</a>
+              </li>
+              <li>
+                <a href="electric.html" class="text-white">Electrician</a>
+              </li>
+              <li>
+                <a href="pestcontrol.html" class="text-white">Pest Control</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="acService.html" class="text-white">AC Service </a>
+              </li>
+              <li>
+                <a href="wm.html" class="text-white">Washing Machine</a>
+              </li>
+              <li>
+                <a href="oven.html" class="text-white">Oven</a>
+              </li>
+              <li>
+                <a href="chimney.html" class="text-white">HOB Cleaning</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+  
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2021 Copyright:
+      <a class="text-white" href="index.html" target="blank">Fixitt.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <img style="width: 100%;"  src="./images/footer2.png" alt="">
+
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content modal-custom">
+        <div class="modal-header">
+          <h5 style="color: white;" class="modal-title label1" id="exampleModalLabel">Please Login to continue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-modal">
+
+            <div class="form-toggle ">
+              <button class="btnlogin" id="login-toggle" onclick="toggleLogin()">Sign In</button>
+              <button class="btnlogin" id="signup-toggle" onclick="toggleSignup()">Register</button>
+            </div>
+            
+            <div id="signup-form">
+              <div class="login">
+                <form name='form-login'>
+            
+                    <h3>REGISTER</h3>
+            
+                    <label for="name">Email</label>
+                    <input type="email" id="name" placeholder="Username" required>
+            
+                    <label for="pw">Password</label>
+                    <input type="password"
+                           id= "pw"
+                           placeholder="Password" required>
+            
+                    <ul class="helper-text">
+                        <li class="length">Must be at least 8 characters long.</li>
+                        <li class="lowercase">Must contain a lowercase letter.</li>
+                        <li class="uppercase">Must contain an uppercase letter.</li>
+                        <li class="special">Must contain a number or special character.</li>
+                    </ul>
+                  
+                    <label for="userName">Phone Number</label><br>
+                    <input type="number"  required>
+
+                     
+                    <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+            
+                </form>
+            </div>
+            </div>
+
+            <div id="login-form">
+              <div class="login">
+                <form name='form-login'>
+            
+                    <h3>SIGN IN</h3>
+            
+                    <label for="userName">Email</label>
+                    <input type="email" id="userName" placeholder="Username" required>
+            
+                    <label for="userPw">Password</label>
+                    <input type="password" id= "userPw" placeholder="Password" required>
+            
+                    <div id="remember">
+                        <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                               style="display: inline-block;">
+                        <label>Remember me</label>
+                    </div>
+                  
+                    <input id= "login_btn" type="submit" value="Login" onclick="check()">
+            
+                </form>
+            </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content app-modal">
+        <div class="modal-header">
+          <h5 style="font-weight: bold;" class="modal-title" id="exampleModalLongTitle">Applainces Category</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-card" onclick="document.location=`tv.html`">
+            <img class="modal-img " src="./images/led.jpg" alt="">
+            <p class="modal-para"> LED TV Repair & Services</p>
+          </div>
+          <div class="modal-card" onclick="document.location=`fridge.html`">
+            <img class="modal-img " src="./images/fridge.jpg" alt="">
+            <p class="modal-para"> Refridgerator Repair</p>
+          </div>
+          <div class="modal-card" onclick="document.location=`wm.html`">
+            <img class="modal-img " src="./images/wm.jpg" alt="">
+            <p class="modal-para"> Washing Machine Repair</p>
+          </div>
+          <div class="modal-card" onclick="document.location=`ro.html`">
+            <img class="modal-img " src="./images/ro.jpg" alt="">
+            <p class="modal-para"> RO service & Repair</p>
+          </div>
+          <div class="modal-card" onclick="document.location=`chimney.html`">
+            <img class="modal-img " src="./images/chimney.jpg" alt="">
+            <p class="modal-para">Chimney Repair & Cleaning</p>
+          </div>
+          <div class="modal-card" onclick="document.location=`geysar.html`">
+            <img class="modal-img " src="./images/geysar.jpg" alt="">
+            <p class="modal-para"> Geysar Service & Repair</p>
+          </div>
+
+          <div class="modal-card" onclick="document.location=`oven.html`">
+            <img class="modal-img " src="./images/oven.jpg" alt="">
+            <p class="modal-para">Oven,Microwave Repair & Services</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script src="login.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script>
+    var preloader = document.getElementById("loading");
+    function myloader() {
+      preloader.style.display = "none";
+
+    }
+  </script>
+</body>
+
+</html>

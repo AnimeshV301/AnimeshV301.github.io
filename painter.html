@@ -1,0 +1,292 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+      <style>
+            body {
+    font-family: 'Montserrat', sans-serif;
+  }
+          .bg-img{
+             margin-top: 80px;
+             
+          }
+          .bg-wall{
+              width: 100%;
+              height: 450px;
+              filter: brightness(0.5);
+          }
+          .head{
+              color: white;
+              font-size: 40px;
+              text-align: center;
+          }
+          .sec1{
+            position: absolute;
+            top: 125px;
+          }
+          .sec1-ul{
+            color: whitesmoke;
+            margin-left: 35px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .paint-para{
+              color: white;
+              text-align: center;
+              border: 1px solid white;
+              width: 250px;
+              padding: 10px;
+              margin-left: 200px;
+              margin-top: 25px;
+              border-radius: 50px;
+              font-weight: bold;
+          }
+          .paint-para:hover{
+              background: cornsilk;
+              color: black;
+          }
+          .card{
+     margin-left: 70px;
+      max-width: 400px;
+    cursor: pointer;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+  transition: all 150ms ease-in-out;
+}
+.card:hover {
+	top: -3px;
+	left: -3px;
+  box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+}
+.sec2{
+    margin-top: 50px;
+}
+.para1{
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: underline;
+      
+  }
+  .card-para{
+      font-weight: bold;
+  }
+  #loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.brandspan{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.brandspan2{
+    color: goldenrod;
+    font-size: 35px;
+    font-weight: bold;
+}
+.brandspan3{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+}
+.navlink1{
+    color: white;
+    font-weight: bold;
+    margin-left: 900px;
+}
+.navlink2{
+    font-weight: bold;
+    margin-left: 30px;
+}
+.custom-span{
+  color: red;
+  font-weight: bold;
+ 
+ 
+}
+.modal-bg{
+     
+     background-image: linear-gradient( 110.5deg,  rgba(248,196,249,0.66) 22.8%, rgba(253,122,4,0.15) 64.6% );
+    }
+@media only screen and (max-width: 600px){
+    .bg-wall {
+    width: 100%;
+    height: 1022px;
+    filter: brightness(0.5);
+}
+.paint-para{
+    margin-left: 50px;
+}
+.sec1 {
+    position: absolute;
+    top: 172px;
+}
+.sec1-ul{
+    margin-left: -9px;
+}
+.bg-img {
+    margin-top: 119px;
+}
+.card {
+    margin-left: 34px;
+    max-width: 306px;
+}
+.navlink1 {
+        color: white;
+        font-weight: bold;
+        margin-left: 46px;
+    }
+    .navlink2 {
+    font-weight: bold;
+    margin-left: 51px;
+}
+}
+
+
+      </style>
+</head>
+
+<body onload="myloader()">
+    <div id="loading"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+      <a class="navbar-brand" href="#"> <span class="brandspan"> FIX</span><span class="brandspan2">itt </span> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div  id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+  
+  
+  
+          <li class="nav-item ">
+  
+          <li class="nav-item ">
+            <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal" data-target="#cart"><i
+                class="fa fa-suitcase"></i> My Booking <span class="custom-span">(</span><span class="total-count custom-span"></span><span class="custom-span">)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
+          </li>
+          </li>
+  
+  
+        </ul>
+  
+      </div>
+    </nav>
+  
+      <div class="container-auto"> 
+          <div class="bg-img">
+              <img class="bg-wall" src="./images/wallbg.jpg" alt="">
+          </div>
+          <div class="col-md-12 sec1">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h1 class="head">Best painters from Fixitt</h1>
+                      <h5 style="text-align: center; color: white;font-weight: bold;">Inclusion & Exclusion</h5>
+                      <ul class="sec1-ul">
+                          <li>Ceiling and wall areas are calculated separately</li>
+                          <li>1 coat of Primer for Royal Family is included</li>
+                          <li>Inspection/Visitation charge will be adjusted against the final bill</li>
+                          <li>Rates mentioned will include touch-up putty only</li>
+                          <li>Additional cost of Rs.2 per sqft will be applicable for full putty</li>
+                          <li>Deep cleaning, Acid wash etc. are not part of process.</li>
+                          <li>Scaffolding might be required based on condition of building, will be charged extra.</li>
+                          <li>Wooden polishing is not part of painting process</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6 ">
+                    <h5 style="text-align: center; color: white;">Service avilable for :</h5>
+                     <div class="paint-para">Tractor Emelsion</div>
+                     <div class="paint-para">Berger</div>
+                     <div class="paint-para">Tractor Premium</div>
+                     <div class="paint-para">Dulux</div>
+                     <div class="paint-para">Asian Paints</div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12 sec2 ">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h2 style="text-align: center;">Procedure</h2>
+                     <ol style="font-weight: bold;">
+                         <li>Process starts with Inspection and consultation where scope of work is detailed and approx. charges are informed.</li>
+                         <li>Painting Process starts with repainting with one full coat of fresh putty followed by primer and 2 coat painting with roller finish, minor cracks, if any, will also be covered.</li>
+                         <li>Doors, windows, floors will be covered with plastic papers before start of painting.</li>
+                     </ol>
+                  </div>
+                  <div class="col-md-4  card">
+                    <h3 class="para1">Incpection Charges</h3>
+                       <ul class="card-list">
+                         <li> For any repair work, a quote will be given before proceeding</li>
+                       </ul>
+                      <p><i class="fa fa-clock-o"></i> 45 min</p>
+                      <p class="card-text card-para">Price: ₹199</p>
+                      <a href="#" data-name="Painting_Incpection_charges" data-price="199"
+                      class="add-to-cart btn btn-dark card-btn">Add </a>
+                </div>
+              </div>
+          </div>
+          <img  style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
+          <img style="width: 100%;"  src="./images/footer2.png" alt="">
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table">
+
+            </table>
+            <div style="font-weight: bold;">Total price: ₹<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button class="clear-cart btn btn-danger">Clear Cart</button>
+            <button type="button" class="btn btn-primary">Book now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <script src="cart.js"></script>
+      <script>
+        var preloader = document.getElementById("loading");
+        function myloader(){
+           preloader.style.display = "none";
+          
+        }
+      </script>
+</body>
+</html>

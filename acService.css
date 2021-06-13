@@ -1,0 +1,153 @@
+.head{
+    text-align: center;
+    background: #f4f4f4;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 80px;
+}
+.brandspan{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.brandspan2{
+    color: goldenrod;
+    font-size: 35px;
+    font-weight: bold;
+}
+.brandspan3{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+}
+.navlink1{
+    color: white;
+    font-weight: bold;
+    margin-left: 800px;
+}
+.navlink2{
+    font-weight: bold;
+    margin-left: 30px;
+}
+.videoad{
+    margin-left: 440px;
+    width: 500px;
+    
+}
+.custom-list{
+    width: 200px;
+}
+.card1{
+    
+    width: 500px;
+    height: 200px;
+    border: 1px solid;
+    margin-left: 438px;
+    margin-top: -143px;
+}
+.custom-listgrp {
+    position: relative;
+    bottom: 156px;
+    left: 139px;
+}
+.card-head{
+    padding-top: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.show-cart li {
+    display: flex;
+  }
+  .custom-card{
+      padding: 10;
+      margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    transition: all 150ms ease-in-out;
+    margin-left: 20px;
+  }
+  .custom-card:hover{
+    top: -3px;
+	left: -3px;
+  box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+
+}
+  .card-para{
+     font-weight: bold; 
+  }
+  .scrollbar{
+     
+  
+  
+    background: #f4f4f4;
+    border: 1px solid goldenrod;
+  
+    
+  }
+  .card-btn{
+      width: 100px;
+      margin-left: 100px;
+      border-radius: 10px;
+      font-weight: bold;
+  }
+  .card-ul{
+      font-size: 15px;
+      color: gray;
+      margin-left: -15px;
+  }
+  .repairman-img{
+      width: 400px;
+      margin-top: 30px;
+  }
+  footer{
+      background: #000;
+      height: 200px;
+      margin-top: 20px;
+  }
+  .modal-bg{
+     
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(116,203,199,1) 0%, rgba(220,246,200,1) 90% );
+  }
+  #loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  @media only screen and (max-width: 600px){
+    .navlink1 {
+        color: white;
+        font-weight: bold;
+        margin-left: 22px;
+    }
+    .videoad {
+        /* margin-left: 440px; */
+        width: 100%;
+        margin-left: 0px;
+    }
+    .scrollbar {
+        background: #f4f4f4;
+        border: 1px solid goldenrod;
+        width: 100%;
+    }
+    .custom-card {
+        margin-left: 12px;
+    }
+    .repairman-img {
+        width: 100%;
+        margin-top: 30px;
+    }
+  }
