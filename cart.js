@@ -1,27 +1,23 @@
 
-// ************************************************
-// Shopping Cart API
-// ************************************************
+
 
 var shoppingCart = (function() {
-// =============================
-// Private methods and propeties
-// =============================
+
 cart = [];
 
-// Constructor
+
 function Item(name, price, count) {
 this.name = name;
 this.price = price;
 this.count = count;
 }
 
-// Save cart
+
 function saveCart() {
 sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
 }
 
-// Load cart
+
 function loadCart() {
 cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
 }
@@ -30,12 +26,10 @@ loadCart();
 }
 
 
-// =============================
-// Public methods and propeties
-// =============================
+
 var obj = {};
 
-// Add to cart
+
 obj.addItemToCart = function(name, price, count) {
 
 for(var item in cart) {
@@ -49,7 +43,7 @@ var item = new Item(name, price, count);
 cart.push(item);
 saveCart();
 }
-// Set count from item
+
 obj.setCountForItem = function(name, count) {
 for(var i in cart) {
 if (cart[i].name === name) {
@@ -58,7 +52,7 @@ break;
 }
 }
 };
-// Remove item from cart
+
 obj.removeItemFromCart = function(name) {
 for(var item in cart) {
 if(cart[item].name === name) {
@@ -72,7 +66,7 @@ if(cart[item].name === name) {
 saveCart();
 }
 
-// Remove all items from cart
+
 obj.removeItemFromCartAll = function(name) {
 for(var item in cart) {
 if(cart[item].name === name) {
@@ -162,7 +156,7 @@ var cartArray = shoppingCart.listCart();
 var output = "";
 for(var i in cartArray) {
 output += "<tr>"
-+ "<td>" + cartArray[i].name + "</td>" 
++ "<td >" + cartArray[i].name + "</td>" 
 + "<td>(" + cartArray[i].price + ")</td>"
 + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
 + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"

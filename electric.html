@@ -29,7 +29,7 @@
         .bg-wall {
             width: 100%;
             height: 450px;
-         
+
         }
 
         .head {
@@ -58,8 +58,8 @@
             background-color: whitesmoke;
             cursor: pointer;
             display: inline-block;
-            border-radius: 20px;
-            box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+            border-radius: 10px;
+
             transition: all 150ms ease-in-out;
         }
 
@@ -69,16 +69,10 @@
             box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
         }
 
-        .card:active {
-            top: 2px;
-            left: 2px;
-            background-color: #e50000;
-            box-shadow: inset 0 0 10px rgba(82, 82, 82, 0.85);
-        }
-
-
+       
         .sec2 {
             margin-top: 50px;
+            background: #fafafc
         }
 
         .para1 {
@@ -105,52 +99,62 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        .card-img{
+
+        .card-img {
             width: 90px;
             margin-left: 50px;
         }
-        .card-info{
+
+        .card-info {
             text-align: center;
             font-weight: bold;
         }
-        .card-btn{
+
+        .card-btn {
             margin-top: -15px;
             margin-left: 70px;
         }
-        .brandspan{
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-}
-.brandspan2{
-    color: goldenrod;
-    font-size: 35px;
-    font-weight: bold;
-}
-.brandspan3{
-    color: white;
-    font-size: 35px;
-    font-weight: 400;
-}
-.navlink1{
-    color: white;
-    font-weight: bold;
-    margin-left: 900px;
-}
-.navlink2{
-    font-weight: bold;
-    margin-left: 30px;
-}
-.custom-span{
-  color: red;
-  font-weight: bold;
- 
- 
-}
-.modal-bg{
-     
-    background-image: linear-gradient( 110.5deg,  rgba(248,196,249,0.66) 22.8%, rgba(253,122,4,0.15) 64.6% );
-   }
+
+        .brandspan {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .brandspan2 {
+            color: goldenrod;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .brandspan3 {
+            color: white;
+            font-size: 35px;
+            font-weight: 400;
+        }
+
+        .navlink1 {
+            color: white;
+            font-weight: bold;
+            margin-left: 900px;
+        }
+
+        .navlink2 {
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        .custom-span {
+            color: red;
+            font-weight: bold;
+
+
+        }
+
+        .modal-bg {
+
+            background-image: linear-gradient(110.5deg, rgba(248, 196, 249, 0.66) 22.8%, rgba(253, 122, 4, 0.15) 64.6%);
+        }
 
         @media only screen and (max-width: 600px) {
             .bg-wall {
@@ -176,19 +180,43 @@
             .bg-img {
                 margin-top: 119px;
             }
-            .card{
-                margin-left: 67px;
-    margin-top: 17px;
+
+            .card {
+                width: 165px;
+                margin-left: -5px;
+                margin-top: 17px;
+                background: white;
             }
+
+
             .navlink1 {
-        color: white;
-        font-weight: bold;
-        margin-left: 46px;
-    }
-    .navlink2 {
-    font-weight: bold;
-    margin-left: 51px;
+                color: white;
+                font-weight: bold;
+                margin-left: 46px;
+            }
+
+            .navlink2 {
+                font-weight: bold;
+                margin-left: 51px;
+            }
+
+            .card-img {
+                width: 90px;
+                margin-left: 38px;
+            }
+
+            .card-btn {
+                margin-left: 53px;
+            }
+
+            .card-info {
+                font-weight: 600;
+            }
+            .cart1 {
+    width: 366px;
+    background: white;
 }
+
 
 
         }
@@ -201,36 +229,38 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
         <a class="navbar-brand" href="#"> <span class="brandspan"> FIX</span><span class="brandspan2">itt </span> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    
-        <div  id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-    
-    
-    
-            <li class="nav-item ">
-    
-            <li class="nav-item ">
-              <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal" data-target="#cart"><i
-                  class="fa fa-suitcase"></i> My Booking <span class="custom-span">(</span><span class="total-count custom-span"></span><span class="custom-span">)</span></a>
-            </li>
-            <li class="nav-item ">
-              <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
-            </li>
-            </li>
-    
-    
-          </ul>
-    
+
+        <div id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+
+
+                <li class="nav-item ">
+
+                <li class="nav-item ">
+                    <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal"
+                        data-target="#cart"><i class="fa fa-suitcase"></i> My Booking <span
+                            class="custom-span">(</span><span class="total-count custom-span"></span><span
+                            class="custom-span">)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
+                </li>
+                </li>
+
+
+            </ul>
+
         </div>
-      </nav>
-   
+    </nav>
+
     <div class="container-auto">
         <div class="bg-img">
             <img class="bg-wall" src="./images/electric.jpg" alt="">
-         
+
         </div>
         <div class="col-md-12 sec1">
             <div class="row">
@@ -256,102 +286,105 @@
                 <div class="col-md-12">
                     <h4>Electrical Services</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
                     <div class="card">
                         <img src="./images/wiring.jpg" class="rounded-circle card-img" alt="Cinque Terre">
-                        <p class="card-info">Wiring  <br> On Incpection</p>
+                        <p class="card-info">Wiring <br> On Incpection</p>
                         <a href="#" data-name="Electric_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/invereter.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Inverter <br> On Incpection</p>
                         <a href="#" data-name="Electric_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/cellingfan.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Celling Fans <br> ₹275</p>
                         <a href="#" data-name="Fan_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/exhaust.jpg" class="rounded-circle card-img" alt="Cinque Terre">
-                        <p class="card-info">Exhaust Fans  <br> ₹375</p>
+                        <p class="card-info">Exhaust Fans <br> ₹375</p>
                         <a href="#" data-name="Exhaust_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                 
+
                 </div>
-             
+
                 <div class="col-md-12 sec2">
                     <h4>Switches Meters and Fuses</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
                     <div class="card">
                         <img src="./images/mcb.jpg" class="rounded-circle card-img" alt="Cinque Terre">
-                        <p class="card-info">MCB Box  <br> On Incpection</p>
+                        <p class="card-info">MCB Box <br> On Incpection</p>
                         <a href="#" data-name="Electric_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/point.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">New Electric Point <br> On Incpection</p>
                         <a href="#" data-name="Electric_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/panel.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">3 phase Panel <br> ₹275</p>
                         <a href="#" data-name="Panel+Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/incpection.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Other Services <br> On Incpection</p>
                         <a href="#" data-name="Electric_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                 
+
                 </div>
                 <div class="col-md-12 sec2">
                     <h4>Lights</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
                     <div class="card">
                         <img src="./images/tubelight.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Tube Light <br> ₹275</p>
                         <a href="#" data-name="TubeLight_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/fancy.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Fancy Lights <br> On Incpection</p>
                         <a href="#" data-name="Fancy_Light_Service" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/holder.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Socket and Holder <br> ₹375</p>
                         <a href="#" data-name="Socket&Holder_Service" data-price="375"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                 
-                 
+
+
                 </div>
             </div>
         </div>
-        <img  style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
-        <img style="width: 100%;"  src="./images/footer2.png" alt="">
+        <img style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
+        <img style="width: 100%;" src="./images/footer2.png" alt="">
         <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content modal-bg">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                        <h4 style="font-weight: bold;" class="modal-title" id="exampleModalLabel">Your Booking</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -364,7 +397,7 @@
                     </div>
                     <div class="modal-footer">
                         <button class="clear-cart btn btn-danger">Clear Cart</button>
-                        <button type="button" class="btn btn-primary">Book now</button>
+                        <button onclick="document.location=`checkout.html`" type="button" class="btn btn-dark ">Book now</button>
                     </div>
                 </div>
             </div>
@@ -378,7 +411,7 @@
 
         }
     </script>
-     
+
 </body>
 
 </html>

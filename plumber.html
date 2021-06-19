@@ -41,6 +41,7 @@
         .sec1 {
             position: absolute;
             top: 125px;
+        
         }
 
         .sec1-ul {
@@ -55,11 +56,11 @@
             width: 200px;
             height: 180px;
             margin: 0px 10px;
-            background-color: whitesmoke;
+            background-color: white;
             cursor: pointer;
             display: inline-block;
-            border-radius: 20px;
-            box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+            border-radius: 10px;
+            
             transition: all 150ms ease-in-out;
         }
 
@@ -69,16 +70,12 @@
             box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
         }
 
-        .card:active {
-            top: 2px;
-            left: 2px;
-            background-color: #e50000;
-            box-shadow: inset 0 0 10px rgba(82, 82, 82, 0.85);
-        }
+      
 
 
         .sec2 {
             margin-top: 50px;
+            background: #fafafc
         }
 
         .para1 {
@@ -105,52 +102,63 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        .card-img{
+
+        .card-img {
             width: 90px;
             margin-left: 50px;
+            border: 0.5px solid grey;
         }
-        .card-info{
+
+        .card-info {
             text-align: center;
             font-weight: bold;
         }
-        .card-btn{
+
+        .card-btn {
             margin-top: -15px;
             margin-left: 70px;
         }
-        .brandspan{
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-}
-.brandspan2{
-    color: goldenrod;
-    font-size: 35px;
-    font-weight: bold;
-}
-.brandspan3{
-    color: white;
-    font-size: 35px;
-    font-weight: 400;
-}
-.navlink1{
-    color: white;
-    font-weight: bold;
-    margin-left: 900px;
-}
-.navlink2{
-    font-weight: bold;
-    margin-left: 30px;
-}
-.custom-span{
-  color: red;
-  font-weight: bold;
- 
- 
-}
-.modal-bg{
-     
-     background-image: linear-gradient( 110.5deg,  rgba(248,196,249,0.66) 22.8%, rgba(253,122,4,0.15) 64.6% );
-    }
+
+        .brandspan {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .brandspan2 {
+            color: goldenrod;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .brandspan3 {
+            color: white;
+            font-size: 35px;
+            font-weight: 400;
+        }
+
+        .navlink1 {
+            color: white;
+            font-weight: bold;
+            margin-left: 900px;
+        }
+
+        .navlink2 {
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        .custom-span {
+            color: red;
+            font-weight: bold;
+
+
+        }
+
+        .modal-bg {
+
+            background-image: linear-gradient(110.5deg, rgba(248, 196, 249, 0.66) 22.8%, rgba(253, 122, 4, 0.15) 64.6%);
+        }
 
         @media only screen and (max-width: 600px) {
             .bg-wall {
@@ -176,20 +184,36 @@
             .bg-img {
                 margin-top: 119px;
             }
-            .card{
-                margin-left: 67px;
-    margin-top: 17px;
-            }
-            .navlink1 {
-        color: white;
-        font-weight: bold;
-        margin-left: 46px;
-    }
-    .navlink2 {
-    font-weight: bold;
-    margin-left: 51px;
-}
 
+            .card {
+                width: 165px;
+                margin-left: -5px;
+                margin-top: 17px;
+                background: white;
+            }
+
+            .navlink1 {
+                color: white;
+                font-weight: bold;
+                margin-left: 46px;
+            }
+
+            .navlink2 {
+                font-weight: bold;
+                margin-left: 51px;
+            }
+
+            .card-img {
+                width: 90px;
+                margin-left: 38px;
+            }
+
+            .card-btn {
+                margin-left: 53px;
+            }
+            .card-info{
+                font-weight: 600;
+            }
 
         }
     </style>
@@ -201,37 +225,39 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
         <a class="navbar-brand" href="#"> <span class="brandspan"> FIX</span><span class="brandspan2">itt </span> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    
-        <div  id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-    
-    
-    
-            <li class="nav-item ">
-    
-            <li class="nav-item ">
-              <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal" data-target="#cart"><i
-                  class="fa fa-suitcase"></i> My Booking <span class="custom-span">(</span><span class="total-count custom-span"></span><span class="custom-span">)</span></a>
-            </li>
-            <li class="nav-item ">
-              <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
-            </li>
-            </li>
-    
-    
-          </ul>
-    
+
+        <div id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+
+
+                <li class="nav-item ">
+
+                <li class="nav-item ">
+                    <a style="color: white;" class="nav-link   navlink1" href="#" data-toggle="modal"
+                        data-target="#cart"><i class="fa fa-suitcase"></i> My Booking <span
+                            class="custom-span">(</span><span class="total-count custom-span"></span><span
+                            class="custom-span">)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a style="color: white;" class="nav-link navlink2 " href="#">Log Out</a>
+                </li>
+                </li>
+
+
+            </ul>
+
         </div>
-      </nav>
+    </nav>
     <div class="container-auto">
         <div class="bg-img">
             <img class="bg-wall" src="./images/plumberwall.jpg" alt="">
-         
+
         </div>
-        <div class="col-md-12 sec1">
+        <div class="col-md-12  sec1">
             <div class="row">
                 <div class="col-md-6">
                     <h1 class="head">Best Plumbers from Fixitt</h1>
@@ -240,7 +266,8 @@
                         <li>Rates include labour charges for the job only.</li>
                         <li>itting or Installation – removal of the spoilt tap & fixing a new one.</li>
                         <li>Inspection/Visitation charge will be adjusted against the final bill</li>
-                        <li>Tap Repair - check for leakages or any other malfunction and replace old washers/spindles if required.
+                        <li>Tap Repair - check for leakages or any other malfunction and replace old washers/spindles if
+                            required.
                         </li>
                         <li>Material/Spare parts costs..</li>
                         <li>Actual amount of the bill will be shared post the completion of service.</li>
@@ -250,139 +277,143 @@
 
             </div>
         </div>
-        <div class="col-md-12 sec2  ">
+        <div class="col-md-12  sec2  ">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 ">
                     <h4>Tap , Wash-Basin and Sink</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
-                    <div class="card">
+                    <div class="card ">
                         <img src="./images/tap.png" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Tap <br> On Inspection</p>
                         <a href="#" data-name="Plumber_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/wash basin.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Wash Basin <br> On Inspection</p>
                         <a href="#" data-name="Plumber_Incpection" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/kitchen sink.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Kitchen Sink<br> ₹275</p>
                         <a href="#" data-name="Kitchen_Sink_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/otherser.jpg" class="rounded-circle card-img" alt="Cinque Terre">
-                        <p class="card-info">Other Services  <br> On Inspection</p>
+                        <p class="card-info">Other Services <br> On Inspection</p>
                         <a href="#" data-name="Plumber_Other_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                 
+
                 </div>
                 <div class="col-md-12 sec2">
                     <h4>Block and leakages</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
                     <div class="card">
                         <img src="./images/kitchen sink.jpg" class="rounded-circle card-img" alt="Cinque Terre">
-                        <p class="card-info">Kitchen Sink  <br> On Inspection</p>
+                        <p class="card-info">Kitchen Sink <br> On Inspection</p>
                         <a href="#" data-name="Kitchen_Sink_Blockage" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/commode.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Western Commode <br> On Inspection</p>
                         <a href="#" data-name="Commode_Blockage" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/tap.png" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Tap<br> On Inspection</p>
                         <a href="#" data-name="Tap_Blockage" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/wash basin.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Wash-Basin<br> On Inspection</p>
                         <a href="#" data-name="Wash_Basin_Blockage" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/otherser.jpg" class="rounded-circle card-img" alt="Cinque Terre">
-                        <p class="card-info">Other Bloackge  <br> On Inspection</p>
+                        <p class="card-info">Other Bloackge <br> On Inspection</p>
                         <a href="#" data-name="BLockage_Other_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                 
+
                 </div>
                 <div class="col-md-12 sec2">
                     <h4>Toilet And Sanitary Work</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
                     <div class="card">
                         <img src="./images/commode.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Western Commode <br> ₹275</p>
                         <a href="#" data-name="Commode_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/flush.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Flush Tanks <br>₹275</p>
                         <a href="#" data-name="Flush_tanks_Service" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/jet.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Toilet Jet <br> ₹375</p>
                         <a href="#" data-name="Toilet_Jet_Service" data-price="375"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/shower.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Shower <br> ₹375</p>
                         <a href="#" data-name="Shower_Service" data-price="375"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                 
-                 
+
+
                 </div>
                 <div class="col-md-12 sec2">
                     <h4>Plumbing Work</h4>
                     <ul>
-                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.</li>
+                        <li>Charges mentioned are for Inspection only, Final quotation will be shared after Inspection.
+                        </li>
                     </ul>
                     <div class="card">
                         <img src="./images/tanker.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Water tank <br> ₹275</p>
                         <a href="#" data-name="Water_Tank_Service" data-price="275"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/jet.jpg" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Pipeline<br>₹275</p>
                         <a href="#" data-name="Pipeline_Service" data-price="299"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
                     <div class="card">
                         <img src="./images/tap.png" class="rounded-circle card-img" alt="Cinque Terre">
                         <p class="card-info">Full Home <br> Health Chechup</p>
                         <a href="#" data-name="Full_Plumbing_Service" data-price="499"
-                        class="add-to-cart btn btn-dark card-btn">Add </a>
+                            class="add-to-cart btn btn-dark card-btn">Add </a>
                     </div>
-                  
-                 
-                 
+
+
+
                 </div>
             </div>
         </div>
-        <img  style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
-        <img style="width: 100%;"  src="./images/footer2.png" alt="">
+        <img style="max-width: 100%; margin-top: 50px;" src="./images/banner3.jpg" alt="">
+        <img style="width: 100%;" src="./images/footer2.png" alt="">
         <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -401,7 +432,7 @@
                     </div>
                     <div class="modal-footer">
                         <button class="clear-cart btn btn-danger">Clear Cart</button>
-                        <button type="button" class="btn btn-primary">Book now</button>
+                        <button onclick="document.location=`checkout.html`"  type="button" class="btn btn-primary">Book now</button>
                     </div>
                 </div>
             </div>

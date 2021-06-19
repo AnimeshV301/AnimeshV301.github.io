@@ -15,15 +15,15 @@
 }
 .navlink1{
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 500px;
 }
 .navlink2{
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 30px;
 }
 .custom-img{
-    height: 500px;
+    height: 560px;
     margin-top: 80px;
 }
 .sliderpara{
@@ -35,7 +35,7 @@
 }
 .slider-sec{
     position: absolute;
-    top: 100px;
+    top: 97px;
     background: darkslategrey;
     width: 500px;
     margin-left: 800px;
@@ -43,7 +43,7 @@
     margin-top: 41px;
     padding-top: 20px;
     border-radius: 20px;
-    
+    height: 450px;
 }
 .sliderpara2{
     text-align: center;
@@ -64,23 +64,22 @@
     width: 465px;
    
 }
+
 .repair-card{
   max-width: 300px;
   margin-left: 30px;
    height: 220px;
-   border-radius: 50px;
-   background-color: whitesmoke;
-   box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+   border-radius: 10px;
+   background-color: white;
+   border: 1px solid rgb(185, 181, 181);
    transition: all 150ms ease-in-out;
   
    
 }
 .repair-card:hover{
-    top: -3px;
-	left: -3px;
-  box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
-
+    box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
 }
+
 .card-row{
     margin-top: 20px;
    
@@ -97,6 +96,7 @@
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    
 }
 .card-row2{
     margin-top: 80px;
@@ -352,7 +352,10 @@
       font-size: 30px;
   }
   .bannerimg{
-      max-width: 100%;
+      max-width: 90%;
+      margin-right: 45px;
+      margin-left: 65px;
+      margin-top: 40px;
   }
   .btnlogin{
       font-size: 20px;
@@ -462,7 +465,10 @@
   #login form input[type="submit"]:hover {
     background: #16aa56;
   }
- 
+  .navbar-toggler{
+    background-color: white;
+    margin-right: 42px;
+  }
  
   
   
@@ -505,7 +511,7 @@
     .navlink1 {
         color: white;
         font-weight: bold;
-        margin-left: 28px;
+        margin-left: 7px;
     }
    
     .brandspan {
@@ -569,4 +575,25 @@
         margin: 50px auto;
         width: 310px;
     }
+    .bannerimg {
+        max-width: 100%;
+        /* margin-right: -39px; */
+        /* margin-left: 65px; */
+        margin-top: 18px;
+        height: 127px;
+        margin-left: 0px;
+    }
+    .mobileimg{
+        display: none;
+    }
+    .logo{
+        margin-top: 8px;
+    }
+    .mobilepara{
+        display: none;
+    }
+    .navlink2{
+        margin-left: 7px;
+    }
+
 }
